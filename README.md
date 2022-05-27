@@ -9,5 +9,8 @@ run https://raw.githubusercontent.com/JinyuanSun/pymol-color-alphafold/master/co
 2. Invoke the extension in the pymol command prompt as so:
 ```
 coloraf model_name
+bg_color white
+set spec_reflect, 0
+set ray_trace_mode, 0
 ```
 ![Step 2 Screenshot](images/step2.png)
