@@ -18,11 +18,14 @@ def coloraf(selection="all"):
     sele (string)
     The name of the selection/object to color by pLDDT. Default: all
     """
-
-    cmd.color("blue", f"({selection}) and b > 90")
-    cmd.color("cyan", f"({selection}) and b < 90 and b > 70")
-    cmd.color("yellow", f"({selection}) and b < 70 and b > 50")
-    cmd.color("orange", f"({selection}) and b < 50")
+    cmd.set_color("high_lddt_c", [0,0.325490196078431,0.843137254901961 ])
+    cmd.set_color("normal_lddt_c", [0.341176470588235,0.792156862745098,0.976470588235294])
+    cmd.set_color("medium_lddt_c", [1,0.858823529411765,0.070588235294118])
+    cmd.set_color("low_lddt_c", [1,0.494117647058824,0.270588235294118])
+    cmd.color("high_lddt_c", f"({selection}) and b > 90")
+    cmd.color("normal_lddt_c", f"({selection}) and b < 90 and b > 70")
+    cmd.color("medium_lddt_c", f"({selection}) and b < 70 and b > 50")
+    cmd.color("low_lddt_c", f"({selection}) and b < 50")
 
 
 cmd.extend("coloraf", coloraf)
