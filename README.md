@@ -2,7 +2,7 @@ This is a pymol extension to color structures from the [AlphaFold Protein Struct
 
 1. Load extension into pymol. In the pymol command prompt:
 ```
-run https://raw.githubusercontent.com/JinyuanSun/pymol-color-alphafold/master/coloraf.py
+run https://raw.githubusercontent.com/JinyuanSun/pymol-vis/master/coloraf.py
 ```
 ![Step 1 Screenshot](images/step1.png)
 
