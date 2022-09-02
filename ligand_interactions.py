@@ -16,7 +16,7 @@ def ligand_interactions(selection="all"):
     pymol.cmd.set('valence',0)
     pymol.cmd.h_add('polymer.protein AND (element O,N,S)')
     pymol.preset.ligands()
-    pymol.cmd.select('pocket','polymer.protein within 5 of organic')
+    pymol.cmd.select('pocket','br. all within 5 of organic')
     pymol.cmd.set('line_as_cylinders')
     pymol.cmd.label('pocket and name CA','"%s%s" % (resi, resn)')
     pymol.cmd.set('float_labels')
@@ -31,7 +31,7 @@ def ligand_interactions(selection="all"):
     pymol.cmd.set('surface_color', 'white', '*')
     pymol.cmd.set('transparency', 0.7)
     pymol.cmd.set('stick_h_scale', 1)
-    pymol.cmd.hide('line','polymer.protein and (name ca,c,n,o)')
+    pymol.cmd.hide('line','polymer.protein and (name c,n,o)')
     pymol.cmd.set('cartoon_side_chain_helper')
 
 pymol.cmd.extend("ligand_interactions", ligand_interactions)
